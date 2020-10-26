@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <script type="module" src="VisualPathfinder.js"></script>
+        <title>Visual Pathfinder</title>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id ="toolbar">
+            <div class="dropdown">Algorithm
+                <div class="dropdownContent">
+                    <input type="radio" name="algorithm" id="dijkstra" checked="checked"><label for="dijkstra">Dijkstra</label>
+                    <input type="radio" name="algorithm" id ="astar"><label for="astar">A*</label>
+                </div>
+            </div>
+            <div class="dropdown">Maze
+                <div class="dropdownContent">
+                    <input type="radio" name="maze" id="recursive"><label for="recursive">Recursive Division</label>
+                </div>
+            </div>
+            <div class="dropdown">Tools
+                <div class="dropdownContent">
+                    <input type="radio" name="tool" id="start"><label for="start">Start</label>
+                    <input type="radio" name="tool" id="goal"><label for="goal">Goal</label>
+                    <input type="radio" name="tool" id="wall" checked="checked"><label for="wall">Wall</label>
+                    <input type="radio" name="tool" id="open"><label for="open">Erase Wall</label>
+                </div>
+            </div>
+            <div class="dropdown" id="clear">Clear Board</div>
+            <div class="dropdown" id="solve">Solve</div>
+        </div>
+        <div id="canvasContainer">
+            <canvas id ="grid" width="1020" height="770"></canvas>
+        </div>
+    </body>
+</html>
